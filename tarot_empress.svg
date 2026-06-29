@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="800" viewBox="0 0 500 800">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#3b0d57" />
+      <stop offset="100%" stop-color="#190824" />
+    </linearGradient>
+    <linearGradient id="line" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ffcc33" />
+      <stop offset="100%" stop-color="#ff66cc" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="480" height="780" rx="40" ry="40" fill="url(#bg)" stroke="#f4c542" stroke-width="18" />
+  <rect x="40" y="40" width="420" height="720" rx="30" ry="30" fill="rgba(255,255,255,0.04)" />
+  <text x="250" y="140" text-anchor="middle" fill="#ffdd88" font-family="Cairo, sans-serif" font-size="34" font-weight="700">THE EMPRESS</text>
+  <text x="250" y="190" text-anchor="middle" fill="#f0b6e3" font-family="Cairo, sans-serif" font-size="20">كارت الإمبراطورة</text>
+  <circle cx="250" cy="420" r="130" fill="rgba(255,255,255,0.1)" stroke="url(#line)" stroke-width="12" />
+  <path d="M210,340 Q250,280 290,340 L290,520 Q250,560 210,520 Z" fill="#f6d171" />
+  <path d="M235,320 Q250,290 265,320 L265,450 Q250,470 235,450 Z" fill="#ffffff" opacity="0.9" />
+  <circle cx="250" cy="340" r="22" fill="#fff2b3" />
+  <text x="250" y="690" text-anchor="middle" fill="#f4c542" font-family="Cairo, sans-serif" font-size="22" font-weight="600">الوفرة والنمو</text>
+  <text x="250" y="730" text-anchor="middle" fill="#f0b6e3" font-family="Cairo, sans-serif" font-size="18">الطاقة الأنثوية الكونية</text>
+</svg>

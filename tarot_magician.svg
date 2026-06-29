@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="800" viewBox="0 0 500 800">
+  <defs>
+    <linearGradient id="bg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#14122d" />
+      <stop offset="100%" stop-color="#311f60" />
+    </linearGradient>
+    <linearGradient id="line2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#79f2ff" />
+      <stop offset="100%" stop-color="#e9b5ff" />
+    </linearGradient>
+  </defs>
+  <rect x="10" y="10" width="480" height="780" rx="40" ry="40" fill="url(#bg2)" stroke="#91c7ff" stroke-width="18" />
+  <rect x="40" y="40" width="420" height="720" rx="30" ry="30" fill="rgba(255,255,255,0.05)" />
+  <text x="250" y="140" text-anchor="middle" fill="#a5e6ff" font-family="Cairo, sans-serif" font-size="34" font-weight="700">THE MAGICIAN</text>
+  <text x="250" y="190" text-anchor="middle" fill="#c8a4ff" font-family="Cairo, sans-serif" font-size="20">كارت الساحر</text>
+  <path d="M180,520 Q250,380 320,520 Q310,560 250,520 Q190,560 180,520 Z" fill="#e4cdff" opacity="0.9" />
+  <rect x="220" y="270" width="60" height="180" rx="20" ry="20" fill="#f6a6ff" />
+  <circle cx="250" cy="230" r="28" fill="#fff5c4" stroke="url(#line2)" stroke-width="10" />
+  <path d="M250,260 L250,500" stroke="#ffffff" stroke-width="12" stroke-linecap="round" />
+  <path d="M250,330 L210,370" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+  <path d="M250,330 L290,370" stroke="#ffffff" stroke-width="10" stroke-linecap="round" />
+  <text x="250" y="690" text-anchor="middle" fill="#c8a4ff" font-family="Cairo, sans-serif" font-size="22" font-weight="600">التركيز والإرادة</text>
+  <text x="250" y="730" text-anchor="middle" fill="#a5e6ff" font-family="Cairo, sans-serif" font-size="18">قوة التجلي السحرية</text>
+</svg>
