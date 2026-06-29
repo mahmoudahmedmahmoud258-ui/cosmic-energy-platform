@@ -1932,33 +1932,41 @@ with tabs[0]:
     if st.session_state.comparison_results:
         st.markdown("<h4 id='msfwft-altwafqat-almtqdmt' style='color:#00ffcc; text-align:center;'>📊 مصفوفة التوافقات المتقدمة</h4>", unsafe_allow_html=True)
         st.markdown("<h4 id='tfasyl-almqarnat' style='color:#00ffcc; text-align:center;'>📋 تفاصيل المقارنات</h4>", unsafe_allow_html=True)
-        table_html = """
-        <table style="width:100%; border-collapse:collapse; text-align:right; direction:rtl; table-layout:fixed;">
-            <thead style="background:rgba(255,215,0,0.15); border-bottom:2px solid #ffd700;">
-                <tr>
-                    <th style="padding:12px; border:1px solid rgba(255,215,0,0.3); color:#ffd700;">الزوج</th>
-                    <th style="padding:12px; border:1px solid rgba(255,215,0,0.3); color:#ffd700;">التوافق الرقمي</th>
-                    <th style="padding:12px; border:1px solid rgba(255,215,0,0.3); color:#ffd700;">الأبراج</th>
-                    <th style="padding:12px; border:1px solid rgba(255,215,0,0.3); color:#ffd700;">العناصر</th>
-                </tr>
-            </thead>
-            <tbody>
+        
+        # كود جدول المقارنات المتقدمة المنسق بالألوان الكونية والزجاجية
+        comparison_table_html = """
+        <div style="overflow-x: auto; direction: rtl; text-align: right; padding: 10px;">
+            <table style="width: 100%; border-collapse: collapse; background: rgba(15, 10, 34, 0.65); border-radius: 12px; border: 1px solid rgba(0, 255, 204, 0.2); backdrop-filter: blur(8px);">
+                <thead>
+                    <tr style="background: linear-gradient(90deg, #1f1244 0%, #0d0621 100%); color: #00ffcc;">
+                        <th style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.15);">الزوج</th>
+                        <th style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.15);">نسبة التوافق</th>
+                        <th style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.15);">الأبراج</th>
+                        <th style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.15);">العناصر</th>
+                    </tr>
+                </thead>
+                <tbody>
         """
+        
         for i, row in enumerate(st.session_state.comparison_results):
-            bg_color = "rgba(255,215,0,0.05)" if i % 2 == 0 else "transparent"
-            table_html += f"""
-                <tr style="background:{bg_color};">
-                    <td style="padding:12px; border:1px solid rgba(255,215,0,0.2); color:#00ffcc;">{row['الزوج']}</td>
-                    <td style="padding:12px; border:1px solid rgba(255,215,0,0.2); color:#ffd700; font-weight:bold;">{row['التوافق الرقمي']}</td>
-                    <td style="padding:12px; border:1px solid rgba(255,215,0,0.2); color:#bb86fc;">{row['الأبراج']}</td>
-                    <td style="padding:12px; border:1px solid rgba(255,215,0,0.2); color:#ff79c6;">{row['العناصر']}</td>
-                </tr>
+            bg_color = "rgba(0, 255, 204, 0.03)" if i % 2 == 0 else "transparent"
+            comparison_table_html += f"""
+                    <tr style="background: {bg_color};">
+                        <td style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.1); color: #ffffff;">{row['الزوج']}</td>
+                        <td style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.1); color: #00ffcc; font-weight: bold;">{row['التوافق الرقمي']}</td>
+                        <td style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.1); color: #bb86fc;">{row['الأبراج']}</td>
+                        <td style="padding: 12px; border: 1px solid rgba(0, 255, 204, 0.1); color: #ff79c6;">{row['العناصر']}</td>
+                    </tr>
             """
-        table_html += """
-            </tbody>
-        </table>
+        
+        comparison_table_html += """
+                </tbody>
+            </table>
+        </div>
         """
-        components.html(f"<div style='overflow-x:auto; width:100%;'>{table_html}</div>", height=330)
+        
+        st.markdown(comparison_table_html, unsafe_allow_html=True)
+        
         if st.session_state.comparison_best:
             st.markdown(f"""
             <div class="result-box" style="background:rgba(0,255,204,0.1); border-color:#00ffcc;">
